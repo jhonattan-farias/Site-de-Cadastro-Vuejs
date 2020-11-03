@@ -1,24 +1,16 @@
-# first-project
+# Site simples de Cadastro de nome e sobrenome.
 
-## Project setup
-```
-yarn install
-```
+# Tecnologias: 
+**VueJs, Lodash(biblioteca para ordenar nomes em ordem Alfabetica)**
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+# Funcionalidades: 
+- Salvamento de dados do cadastro.
+- Mensagem de erro, caso algum campo esteja vazio.
+- Deletar Clientes Cadastrados.
+- Marcar Clientes Selecionados.
+- Desmarcar Clientes Selecionados.
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## Pra criar essas funcionalidades. Usei os metodos proprios do VueJs, como (Methods,Data e Computed-properties.);
 
-### Lints and fixes files
-```
-yarn lint
-```
+# Obrigado :satisfied: :heart:
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
