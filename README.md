@@ -2,6 +2,7 @@
 
 # Tecnologias: 
 **VueJs, Lodash(biblioteca para ordenar nomes em ordem Alfabetica)**
+## Criado totalmente em VueJs.
 
 # Funcionalidades: 
 - Salvamento de dados do cadastro.
