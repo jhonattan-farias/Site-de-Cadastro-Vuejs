@@ -1,8 +1,9 @@
 # Site simples de Cadastro de nome e sobrenome.
 
 # Tecnologias: 
-**VueJs, Lodash(biblioteca para ordenar nomes em ordem Alfabetica)**
-## Criado totalmente em VueJs.
+- **VueJs( Criado totalmente em VueJs.)**
+- Lodash(biblioteca para ordenar nomes em ordem Alfabetica)
+
 
 # Funcionalidades: 
 - Salvamento de dados do cadastro.
