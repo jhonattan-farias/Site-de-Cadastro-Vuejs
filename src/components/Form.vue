@@ -5,16 +5,17 @@
          <div class="formArea">
      
      <strong>Nome:</strong>
-     <input type="text" v-model="pessoas.nome">
+     <input type="text" v-model="nome">
 
      <strong>Sobrenome:</strong>
-     <input type="text">
+     <input type="text" v-model="sobrenome">
 
      <button @click="addPessoa">ADICIONAR</button>
          </div>
 
+        <strong v-if="check" style="align-self:center;color:white;">PREENCHA OS CAMPOS</strong>
          <div v-for="pessoa in pessoas" :key="pessoa.nome">
-            <Cards :pessoa="pessoa"/>
+            <Cards @deleteClient="deletando($event)" :pessoa="pessoa"/>
          </div>
 
      </div>
@@ -31,26 +32,44 @@ export default {
 
     data(){
         return {
+            check : false,
+
             pessoas:[
-             {
-                 nome:'jhonattan',
-                 sobrenome:'farias'
-             },
-             {
-                 nome:'eren',
-                 sobrenome:'yaegar'
-             },   
+             
             ],
 
+        nome:'',
+        sobrenome:'',
                     
 }
     },
 
     methods:{
         addPessoa: function(){
+            
+            if(this.nome === '' || this.sobrenome === ''){
+                return this.check = true
+            }
+
+            this.pessoas.push({
+                nome:this.nome,
+                sobrenome:this.sobrenome
+            ,})
+
+            this.nome = ''
+            this.sobrenome = ''
+             return this.check = false   
+        },
+
+        deletando: function($event){
+            const name = $event.personName
+            
+              const newPessoas =  this.pessoas.filter(pessoa => name !== pessoa.nome )
+
+              this.pessoas = newPessoas
+            }
 
             
-        }
         
     }
 } 
