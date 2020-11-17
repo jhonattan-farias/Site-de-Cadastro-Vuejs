@@ -7,7 +7,7 @@
       <div class="buttonsArea">
           <button class="delete" @click="select">Selecionar</button>
             <div class="img">
-                <img src="../assets/delete.png" >
+                <img @click="deletar" src="../assets/delete.png" >
             </div>
       </div>
       
@@ -30,6 +30,9 @@ export default {
     methods:{
         select: function(){
             this.isSelected = !this.isSelected
+        },
+        deletar: function(){
+            this.$emit('deleteClient',{personName:this.pessoa.nome})
         }
     }
 
